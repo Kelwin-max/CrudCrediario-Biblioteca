@@ -4,7 +4,7 @@ public record EmprestimoDto(
         Long id,
         String dataEmprestimo,
         String dataDevolucao,
-        UserDto user,
+        UsuarioDto usuario,
         CarteiraBibliotecaDto carteiraBiblioteca
 ) {
 }

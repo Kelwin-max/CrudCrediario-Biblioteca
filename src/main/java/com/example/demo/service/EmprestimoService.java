@@ -1,6 +1,5 @@
 package com.example.demo.service;
 
-import com.example.demo.dto.EmprestimoDto;
 import com.example.demo.entities.Emprestimo;
 import com.example.demo.repo.EmprestimoRepo;
 import lombok.RequiredArgsConstructor;
@@ -30,12 +29,16 @@ public class EmprestimoService {
         Emprestimo emprestimo = findById(id);
         emprestimo.setDataEmprestimo(emprestimoDetails.getDataEmprestimo());
         emprestimo.setDataDevolucao(emprestimoDetails.getDataDevolucao());
-        emprestimo.setUser(emprestimoDetails.getUser());
+        emprestimo.setUsuario(emprestimoDetails.getUsuario());
         emprestimo.setCarteira(emprestimoDetails.getCarteira());
         return emprestimoRepo.save(emprestimo);
     }
 
     public void deleteById(Long id) {
         emprestimoRepo.deleteById(id);
+    }
+
+    public List<Emprestimo> findByUsuarioId(Long usuarioId) {
+        return List.of();
     }
 }

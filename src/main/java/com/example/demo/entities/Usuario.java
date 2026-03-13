@@ -11,8 +11,8 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "user")
-public class User {
+@Table(name = "usuario")
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,12 +21,12 @@ public class User {
     @Email
     private String email;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
     private CarteiraBiblioteca carteira;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "usuario")
     private List<Emprestimo> emprestimos;
 
-    public User(Object o, String name, String email) {
+    public Usuario(Object o, String name, String email) {
     }
 }

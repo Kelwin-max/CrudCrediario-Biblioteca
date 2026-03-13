@@ -21,6 +21,6 @@ public class CarteiraBiblioteca {
     private String codigo;
 
     @OneToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
 }

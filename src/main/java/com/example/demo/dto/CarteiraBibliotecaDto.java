@@ -3,5 +3,5 @@ package com.example.demo.dto;
 public record CarteiraBibliotecaDto(
         Long id,
         String codigo,
-        UserDto user
+        UsuarioDto usuario
 ) {}

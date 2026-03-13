@@ -1,6 +1,6 @@
 package com.example.demo.dto;
 
-public record UserDto(
+public record UsuarioDto(
         Long id,
         String name,
         String email

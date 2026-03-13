@@ -20,6 +20,12 @@ public class EmprestimoController {
         return ResponseEntity.ok(emprestimoService.findAll());
     }
 
+    // NOVO MÉTODO: Lista todos os empréstimos de um usuário específico
+    @GetMapping("/usuario/{usuarioId}")
+    public ResponseEntity<List<Emprestimo>> findByUsuario(@PathVariable Long usuarioId) {
+        return ResponseEntity.ok(emprestimoService.findByUsuarioId(usuarioId));
+    }
+
     @PostMapping
     public ResponseEntity<Emprestimo> save(@RequestBody Emprestimo emprestimo) {
         return ResponseEntity.ok(emprestimoService.save(emprestimo));

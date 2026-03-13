@@ -29,6 +29,6 @@ public class Emprestimo {
     private CarteiraBiblioteca carteira;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
 }
