@@ -1,7 +1,8 @@
 package com.example.demo.dto;
 
 public record UsuarioDto(
-        Long id,
+        @NotBlank
         String name,
+        @NotBlank
         String email
 ) {}
